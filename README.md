@@ -11,3 +11,8 @@
 
 5 == rails g controller home index
      set root routes
+
+6 == rails g controller books
+     index action
+     rails g controller authors
+     index action
