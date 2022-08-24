@@ -16,3 +16,6 @@
      index action
      rails g controller authors
      index action
+
+7 == author all rest action
+     dropdown for selecting

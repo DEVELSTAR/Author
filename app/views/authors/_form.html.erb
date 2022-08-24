@@ -1,0 +1,27 @@
+<%= form_with model: author, data: { turbo: false }  do |form| %> 
+
+  <% if @author.errors.any? %>
+   <% @author.errors.full_messages.each do |message| %>
+     <p><%= message %></p>
+   <% end %>
+  <% end %>
+
+	<div>
+		<%= form.label :first_name %><br>
+		<%= form.text_field :first_name %>
+	</div>
+	<div>
+		<%= form.label :last_name %><br>
+		<%= form.text_field :last_name %>
+	</div>
+	<div>
+		<%= form.label :date_of_birth %><br>
+		<%= form.text_field :date_of_birth %>
+	</div>
+
+
+	  <%= form.select :title, @books.collect {|k| [ k.title ] } %>
+
+	<%= form.submit %>
+
+<% end %>

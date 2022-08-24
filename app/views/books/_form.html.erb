@@ -10,6 +10,9 @@
 		<%= form.label :title %><br>
 		<%= form.text_field :title %>
 	</div>
+
+	  <%= form.select :first_name, @authors.collect {|u| [ u.first_name ] } %>
+
 	
 	<%= form.submit %>
 
