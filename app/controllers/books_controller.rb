@@ -14,12 +14,13 @@ class BooksController < ApplicationController
 
 	def create
 		@book = Book.new(book_params)
+		# @author = Author.create(author_params)
 		if @book.save
+		#@book.authors.create(author_params)
 			redirect_to books_path, notice: 'Book has been created successfully'
 		else
 			render :new
 		end
-		@authors = Author.all
 	end
 
 	def show
@@ -47,6 +48,9 @@ class BooksController < ApplicationController
 
 	private
 
+	def author_params
+		params.require(:author).permit(:first_name, :last_name, :date_of_birth)
+	end
 
 	def book_params
 		params.require(:book).permit(:title)
