@@ -17,11 +17,11 @@
 			<td><%= author.first_name %> </td>
 			<td><%= author.last_name %> </td>
 			<td><%= author.date_of_birth %> </td>
-			<td><%= link_to 'view', author %></td>
-			<td><%= link_to 'Edit', edit_author_path(author) %></td>
-			<td><%= link_to 'Delete', author, data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %></td>
+			<td><%= link_to 'view', author , class: "btn btn-secondary"%></td>
+			<td><%= link_to 'Edit', edit_author_path(author), class: "btn btn-success" %></td>
+			<td><%= link_to 'Delete', author, data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: "btn btn-danger" %></td>
 		  </tr>
 	    <% end %>
 	</tbody>
 </table> 
-<%= link_to "Create", new_author_path %>
+<%= link_to "Create", new_author_path, class: "btn btn-info" %>

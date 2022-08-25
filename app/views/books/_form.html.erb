@@ -11,9 +11,9 @@
 		<%= form.text_field :title %>
 	</div>
 
-	  <%= form.select :first_name, @authors.collect {|u| [ u.first_name ] } %>
+	  <%= form.select :author_id, @authors.all.map { |e| [e.first_name] } %>
 
 	
-	<%= form.submit %>
+	<%= form.submit class: "btn btn-info" %>
 
 <% end %>

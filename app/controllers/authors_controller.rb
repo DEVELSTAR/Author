@@ -3,7 +3,7 @@ class AuthorsController < ApplicationController
 
 	def index
 		@authors  = Author.all
-		@books = Book.all
+		# @books = Book.all
 	end
 
 	def new
@@ -21,7 +21,7 @@ class AuthorsController < ApplicationController
 	end
 
 	def show
-		@books = Book.all
+		# @author = Book.authors(first_name: params[:author][:first_name])
 	end
 
 	def edit

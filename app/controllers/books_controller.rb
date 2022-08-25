@@ -3,13 +3,13 @@ class BooksController < ApplicationController
 
 	def index
 		@books = Book.all
-		@authors = Author.all
+		# @authors = Author.all
 	end
 
 
 	def new
 		@book = Book.new
-		@authors = Author.all
+		# @authors = Author.all
 	end
 
 	def create
@@ -24,7 +24,7 @@ class BooksController < ApplicationController
 	end
 
 	def show
-		@authors = Author.all
+		# @authors = Author.all
 
 	end
 
@@ -48,9 +48,9 @@ class BooksController < ApplicationController
 
 	private
 
-	def author_params
-		params.require(:author).permit(:first_name, :last_name, :date_of_birth)
-	end
+	# def author_params
+	# 	params.require(:author).permit(:first_name, :last_name, :date_of_birth)
+	# end
 
 	def book_params
 		params.require(:book).permit(:title)

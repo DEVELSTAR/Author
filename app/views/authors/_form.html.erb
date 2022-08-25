@@ -20,8 +20,8 @@
 	</div>
 
 
-	  <%= form.select :title, @books.collect {|k| [ k.title ] } %>
+	  <%= form.select :title, @books.all.map {|k| [ k.title ] } %>
 
-	<%= form.submit %>
+	<%= form.submit class: "btn btn-info" %>
 
 <% end %>
